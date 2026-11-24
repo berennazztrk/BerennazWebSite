@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foki'nin Renkli Oyun Hamuru Dünyası 🦊✨</title>
+  
+  <!-- Google Fonts: Baloo 2 (başlıklar için) ve Quicksand (metinler için) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- İnteraktif Pul Bildirimi -->
+  <div id="stamper-toast" class="stamp-toast" aria-live="polite">
+    ✨ Ekranda herhangi bir yere tıkla, sevimli pullar bırak!
+  </div>
+
+  <!-- Üst Duyuru Çubuğu -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span class="sparkle-icon">🦊</span>
+      <span>Foki'nin oyun hamurundan sihirli dünyasına hoş geldiniz! 5 yeni macerayı keşfedin.</span>
+      <a href="#maceralar" class="announcement-link">Hikayeyi Gör &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Navigasyon Çubuğu -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="#" class="brand-logo">
+        <div class="logo-fox-badge">🦊</div>
+        <div class="brand-text">
+          <span class="brand-name">Foki'nin Dünyası</span>
+          <span class="brand-sub">Oyun Hamuru Maceraları</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hakkinda">Hakkında</a></li>
+        <li><a href="#maceralar">5 Büyük Macera</a></li>
+        <li><a href="#galeri">Fotoğraf Galerisi</a></li>
+        <li><a href="#atolye">Kil Atölyesi</a></li>
+        <li><a href="#yorumlar">Minik Dostlar</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="toggle-stamp-btn" class="btn btn-secondary btn-stamp-mode" title="Sevimli pul modunu aç">
+          <span class="icon">🎨</span> Pul Modu
+        </button>
+        <a href="#kulup" class="btn btn-primary">Foki'ye Katıl 🐾</a>
+      </div>
+
+      <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Menüyü aç">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobil Çekmece Menü -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="#hakkinda" class="mobile-link">Hakkında</a></li>
+      <li><a href="#maceralar" class="mobile-link">5 Büyük Macera</a></li>
+      <li><a href="#galeri" class="mobile-link">Fotoğraf Galerisi</a></li>
+      <li><a href="#atolye" class="mobile-link">Kil Atölyesi</a></li>
+      <li><a href="#yorumlar" class="mobile-link">Minik Dostlar</a></li>
+    </ul>
+    <div class="mobile-nav-buttons">
+      <a href="#kulup" class="btn btn-primary mobile-link">Foki'ye Katıl 🐾</a>
+    </div>
+  </div>
+
+  <!-- Hero (Giriş) Bölümü: Fotoğraflara Bolca Yer Veren Görsel Alan -->
+  <section class="hero-section" id="hakkinda">
+    <div class="hero-decorations">
+      <div class="doodle doodle-sun">
+        <svg viewBox="0 0 100 100" width="70" height="70" fill="none">
+          <circle cx="50" cy="50" r="28" fill="#FFB703"/>
+          <path d="M50 8v12M50 80v12M8 50h12M80 50h12M20 20l9 9M71 71l9 9M20 80l9-9M71 29l9-9" stroke="#FB8500" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="doodle doodle-flower flower-1">🌸</div>
+      <div class="doodle doodle-star star-1">⭐</div>
+      <div class="doodle doodle-star star-2">✨</div>
+      <div class="doodle doodle-cloud">☁️</div>
+    </div>
+
+    <div class="hero-container container">
+      <div class="hero-text-col">
+        <div class="badge-pill">
+          <span class="badge-emoji">🧡</span>
+          <span>El Yapımı Kil &amp; Oyun Hamuru Sanatı</span>
+        </div>
+        <h1 class="hero-title">
+          Oyun Hamurundan Bir <span class="highlight-coral">Tilkinin</span> En Renkli <span class="highlight-yellow">Maceraları!</span>
+        </h1>
+        <p class="hero-description">
+          Tanışın: Bu Foki! Turuncu tüyleri, sıcacık gülümsemesi ve kocaman hayal gücüyle oyun hamurundan doğan sevimli tilkimiz. Doğayı keşfediyor, hamurdan müzikler yapıyor ve arkadaşlarıyla leziz şölenler veriyor!
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#maceralar" class="btn btn-primary btn-lg">5 Fotoğrafı Keşfet <span>📸</span></a>
+          <a href="#galeri" class="btn btn-outline btn-lg">Büyük Galeri <span>🎨</span></a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">5/5</span>
+            <span class="stat-label">Özel Fotoğraf</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">%100</span>
+            <span class="stat-label">Oyun Hamuru</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">Sonsuz</span>
+            <span class="stat-label">Neşe &amp; Kahkaha</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Fotoğraf Vitrini: 24px Köşeler & Bolca Görsel Alan -->
+      <div class="hero-visual-col">
+        <div class="photo-cluster">
+          <div class="photo-card photo-card-main">
+            <img src="images/tilki-maskot.jpg" alt="Sevimli oyun hamurundan tilki maskot karakteri Foki" class="hero-img">
+            <div class="floating-badge badge-top-right">
+              <span class="badge-icon">🦊</span>
+              <span>Ben Foki!</span>
+            </div>
+            <div class="floating-badge badge-bottom-left">
+              <span class="badge-icon">✨</span>
+              <span>%100 El Yapımı</span>
+            </div>
+          </div>
+
+          <div class="photo-card photo-card-sub1" title="Sihirli Hamur Vadisi">
+            <img src="images/tilki-manzara.jpg" alt="Tilki Foki vadide gün batımını izliyor" class="hero-img-thumb">
+          </div>
+
+          <div class="photo-card photo-card-sub2" title="Müzik Zamanı!">
+            <img src="images/tilki-muzik-caliyor.jpg" alt="Foki hamurdan çalgılarla müzik yapıyor" class="hero-img-thumb">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dalgalı Geçiş: Hero -> Maceralar -->
+    <div class="wave-divider wave-hero-to-adventures">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="currentColor">
+        <path d="M0,32L48,42.7C96,53,192,75,288,80C384,85,480,75,576,58.7C672,43,768,21,864,21.3C960,21,1056,43,1152,53.3C1248,64,1344,64,1392,64L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- BÖLÜM 2: 5 BÜYÜK MACERA (Fotoğraflara Bolca Yer Veren Kartlar) -->
+  <section class="section adventures-section" id="maceralar">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-pill pill-coral">
+          <span>🐾 Fotoğraflarla Hikaye Zamanı</span>
+        </div>
+        <h2 class="section-title">Foki'nin 5 Büyük Hamur Macerası</h2>
+        <p class="section-subtitle">
+          Klasörümüzdeki her bir fotoğraf, Foki'nin hayatındaki unutulmaz bir dönüm noktasını anlatıyor. Yakından incelemek için fotoğraflara tıkla!
+        </p>
+      </div>
+
+      <!-- 5 Maceranın Detaylı Görsel Akışı -->
+      <div class="adventures-stream">
+        
+        <!-- Macera 1: Maskot Karakter -->
+        <article class="adventure-row">
+          <div class="adventure-visual">
+            <div class="visual-frame">
+              <img src="images/tilki-maskot.jpg" alt="Foki sevimli maskot karakteri" class="adventure-img" loading="lazy">
+              <span class="photo-number-tag">Fotoğraf #1</span>
+            </div>
+          </div>
+          <div class="adventure-text-box card-yellow">
+            <div class="story-badge">
+              <span>🌟 1. Bölüm</span>
+            </div>
+            <h3 class="adventure-heading">Foki'nin Doğuşu: Kil Dünyasının Neşesi</h3>
+            <p class="adventure-desc">
+              Bir parça sıcak turuncu hamur, iki minik siyah göz ve sıcacık bir gülümseme! Foki ilk kez şekil aldığında masadaki tüm renkler canlandı. Minik kulaklarıyla etraftaki tüm sesleri duymaya, meraklı burnuyla yeni maceraların kokusunu almaya bayılıyor.
+            </p>
+            <div class="adventure-highlights">
+              <span class="highlight-tag">🧡 Sevimli Maskot</span>
+              <span class="highlight-tag">🎨 Kil Heykelcik</span>
+              <span class="highlight-tag">✨ %100 El İşi</span>
+            </div>
+            <button class="btn btn-secondary open-photo-modal" data-src="images/tilki-maskot.jpg" data-title="Foki'nin Doğuşu" data-desc="Turuncu oyun hamurundan özenle şekillendirilmiş sevimli tilkimiz Foki.">
+              Büyük Boy İncele 🔍
+            </button>
+          </div>
+        </article>
+
+        <!-- Macera 2: Manzara -->
+        <article class="adventure-row row-reverse">
+          <div class="adventure-visual">
+            <div class="visual-frame">
+              <img src="images/tilki-manzara.jpg" alt="Foki hamur vadisine bakarken" class="adventure-img" loading="lazy">
+              <span class="photo-number-tag">Fotoğraf #2</span>
+            </div>
+          </div>
+          <div class="adventure-text-box card-peach">
+            <div class="story-badge">
+              <span>🌄 2. Bölüm</span>
+            </div>
+            <h3 class="adventure-heading">Sihirli Hamur Vadisi &amp; Ufuk Çizgisi</h3>
+            <p class="adventure-desc">
+              Güneşin altın gibi parladığı bir sabah, Foki vadinin en yüksek hamur tepesine tırmandı. Karşısında dalgalı nehirler, yumuşacık tepeler ve rengarenk hamur çiçekleri uzanıyordu. Doğanın bu masalsı güzelliği karşısında büyülenip derin bir nefes aldı.
+            </p>
+            <div class="adventure-highlights">
+              <span class="highlight-tag">🏞️ Masalsı Manzara</span>
+              <span class="highlight-tag">🌅 Altın Işık</span>
+              <span class="highlight-tag">🌿 Doğayı Keşif</span>
+            </div>
+            <button class="btn btn-secondary open-photo-modal" data-src="images/tilki-manzara.jpg" data-title="Sihirli Hamur Vadisi" data-desc="Foki'nin hamur tepelerinden gün doğumunu izlediği büyüleyici manzara.">
+              Büyük Boy İncele 🔍
+            </button>
+          </div>
+        </article>
+
+        <!-- Macera 3: Müziği Keşfetme -->
+        <article class="adventure-row">
+          <div class="adventure-visual">
+            <div class="visual-frame">
+              <img src="images/tilki-muzigi-kesfediyor.jpg" alt="Foki müziği keşfedip şaşırıp gülüyor" class="adventure-img" loading="lazy">
+              <span class="photo-number-tag">Fotoğraf #3</span>
+            </div>
+          </div>
+          <div class="adventure-text-box card-mint">
+            <div class="story-badge">
+              <span>🎵 3. Bölüm</span>
+            </div>
+            <h3 class="adventure-heading">Müziği Keşfettiği An: Şaşkınlık ve Kahkaha!</h3>
+            <p class="adventure-desc">
+              Hamurdan bir çubuğu içi boş bir kütüğe vurduğunda çıkan 'tık-tık-tık' sesi Foki'yi önce çok şaşırttı! Kulakları sevinçle dikildi, gözleri parladı ve birden neşeyle gülmeye başladı. İşte o an kendi ritmini bulduğunu anladı!
+            </p>
+            <div class="adventure-highlights">
+              <span class="highlight-tag">😮 Şaşkın &amp; Mutlu</span>
+              <span class="highlight-tag">🎶 İlk Ritimler</span>
+              <span class="highlight-tag">😆 Kahkaha Dolu</span>
+            </div>
+            <button class="btn btn-secondary open-photo-modal" data-src="images/tilki-muzigi-kesfediyor.jpg" data-title="Müziğin Keşfi" data-desc="Foki'nin ilk müzik notasını duyduğundaki tatlı şaşkınlığı ve neşeli kahkahası.">
+              Büyük Boy İncele 🔍
+            </button>
+          </div>
+        </article>
+
+        <!-- Macera 4: Müzik Çalıyor -->
+        <article class="adventure-row row-reverse">
+          <div class="adventure-visual">
+            <div class="visual-frame">
+              <img src="images/tilki-muzik-caliyor.jpg" alt="Foki oyun hamurundan çalgısıyla müzik yapıyor" class="adventure-img" loading="lazy">
+              <span class="photo-number-tag">Fotoğraf #4</span>
+            </div>
+          </div>
+          <div class="adventure-text-box card-lavender">
+            <div class="story-badge">
+              <span>🎸 4. Bölüm</span>
+            </div>
+            <h3 class="adventure-heading">Hamur Orkestrası: Melodilerin Dansı</h3>
+            <p class="adventure-desc">
+              Artık Foki usta bir müzisyen! Mor, yeşil ve sarı oyun hamurlarından kendi enstrümanlarını modelledi. Ormandaki minik kuşlar ve tavşanlar toplanıp Foki'nin çaldığı sıcacık melodilerle dans etmeye başladı. Müzik ruhun hamurudur!
+            </p>
+            <div class="adventure-highlights">
+              <span class="highlight-tag">🎻 Hamur Çalgıları</span>
+              <span class="highlight-tag">🎼 Sevimli Konser</span>
+              <span class="highlight-tag">🌈 Renkli Melodiler</span>
+            </div>
+            <button class="btn btn-secondary open-photo-modal" data-src="images/tilki-muzik-caliyor.jpg" data-title="Hamur Orkestrası" data-desc="Foki'nin hamurdan enstrümanlarıyla verdiği sıcacık solo konser anı.">
+              Büyük Boy İncele 🔍
+            </button>
+          </div>
+        </article>
+
+        <!-- Macera 5: Ziyafet -->
+        <article class="adventure-row">
+          <div class="adventure-visual">
+            <div class="visual-frame">
+              <img src="images/tilki-yemek-ziyafeti.jpg" alt="Foki hamurdan leziz yemeklerle ziyafet çekiyor" class="adventure-img" loading="lazy">
+              <span class="photo-number-tag">Fotoğraf #5</span>
+            </div>
+          </div>
+          <div class="adventure-text-box card-coral">
+            <div class="story-badge">
+              <span>🥧 5. Bölüm</span>
+            </div>
+            <h3 class="adventure-heading">Büyük Hamur Ziyafeti: Nefis Bir Şölen!</h3>
+            <p class="adventure-desc">
+              Konserin ardından karnı acıkan Foki, minyatür hamur tabaklarını taze hamur meyveleri, turtalar ve çıtır hamur çörekleriyle doldurdu. Arkadaşlarıyla paylaştığı bu ziyafet, günün en tatlı ve en lezzetli anı oldu!
+            </p>
+            <div class="adventure-highlights">
+              <span class="highlight-tag">🍓 Minik İkramlar</span>
+              <span class="highlight-tag">🥐 Lezzet Şöleni</span>
+              <span class="highlight-tag">😋 Mutlu Karınlar</span>
+            </div>
+            <button class="btn btn-secondary open-photo-modal" data-src="images/tilki-yemek-ziyafeti.jpg" data-title="Büyük Hamur Ziyafeti" data-desc="Müzik dolu günün ardından kurulan renkli ve leziz oyun hamuru sofrası.">
+              Büyük Boy İncele 🔍
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Dalgalı Geçiş: Maceralar -> Galeri -->
+    <div class="wave-divider wave-adventures-to-gallery">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="currentColor">
+        <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,69.3C960,85,1056,107,1152,106.7C1248,107,1344,85,1392,74.7L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- BÖLÜM 3: BÜYÜK FOTOĞRAF GALERİSİ (Fotoğraflara Bolca Yer Veren İnteraktif Izgara) -->
+  <section class="section gallery-section" id="galeri">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-pill pill-yellow">
+          <span>📸 Yüksek Çözünürlüklü Vitrin</span>
+        </div>
+        <h2 class="section-title">Foki'nin Fotoğraf Koleksiyonu</h2>
+        <p class="section-subtitle">
+          5 özel fotoğrafı kategorilere göre filtreleyebilir, üzerlerine gelerek büyütebilir veya tıklayıp tam ekran inceleyebilirsiniz!
+        </p>
+
+        <!-- Filtre Butonları (Butonlar üzerine gelince büyür) -->
+        <div class="gallery-filter-buttons" role="tablist">
+          <button class="filter-btn active" data-filter="all">Tüm Fotoğraflar (5)</button>
+          <button class="filter-btn" data-filter="karakter">Karakter 🦊</button>
+          <button class="filter-btn" data-filter="doga">Manzara &amp; Doğa 🌄</button>
+          <button class="filter-btn" data-filter="muzik">Müzik &amp; Neşe 🎶</button>
+          <button class="filter-btn" data-filter="ziyafet">Ziyafet &amp; Tatlı 🥐</button>
+        </div>
+      </div>
+
+      <!-- 5 Fotoğrafın Geniş Grid Düzeni -->
+      <div class="gallery-grid-special" id="gallery-grid">
+        
+        <!-- Galeri Öğe 1: Maskot -->
+        <div class="gallery-card-special" data-category="karakter" data-title="Foki Karakter Portresi" data-desc="Sıcak turuncu oyun hamurundan yapılmış, el yapımı maskotumuz Foki.">
+          <div class="card-inner-frame">
+            <img src="images/tilki-maskot.jpg" alt="Foki Maskot Karakteri" loading="lazy">
+            <div class="gallery-card-badge">Maskot Portresi</div>
+            <div class="gallery-card-overlay">
+              <span class="zoom-bubble">🔍</span>
+              <h4 class="overlay-heading">Foki Karakteri</h4>
+              <span class="overlay-sub">Karakter Tasarımı</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galeri Öğe 2: Manzara -->
+        <div class="gallery-card-special card-wide" data-category="doga" data-title="Büyülü Hamur Vadisi Manzarası" data-desc="Foki vadinin zirvesinde doğanın renklerini seyre dalıyor.">
+          <div class="card-inner-frame">
+            <img src="images/tilki-manzara.jpg" alt="Foki Doğa Manzarası" loading="lazy">
+            <div class="gallery-card-badge">Hamur Vadisi</div>
+            <div class="gallery-card-overlay">
+              <span class="zoom-bubble">🔍</span>
+              <h4 class="overlay-heading">Sihirli Vadi</h4>
+              <span class="overlay-sub">Doğa &amp; Manzara</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galeri Öğe 3: Müziği Keşfediyor -->
+        <div class="gallery-card-special" data-category="muzik" data-title="Müzikle İlk Tanışma" data-desc="Foki çıkan sese inanamıyor ve neşeyle kahkaha atıyor!">
+          <div class="card-inner-frame">
+            <img src="images/tilki-muzigi-kesfediyor.jpg" alt="Foki Müziği Keşfediyor" loading="lazy">
+            <div class="gallery-card-badge">İlk Melodi</div>
+            <div class="gallery-card-overlay">
+              <span class="zoom-bubble">🔍</span>
+              <h4 class="overlay-heading">Şaşkın Müzisyen</h4>
+              <span class="overlay-sub">Müzik &amp; Neşe</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galeri Öğe 4: Müzik Çalıyor -->
+        <div class="gallery-card-special" data-category="muzik" data-title="Hamur Çalgısıyla Solo Performans" data-desc="Foki kendi yaptığı renkli hamur enstrümanıyla solo parçalar çalıyor.">
+          <div class="card-inner-frame">
+            <img src="images/tilki-muzik-caliyor.jpg" alt="Foki Müzik Çalıyor" loading="lazy">
+            <div class="gallery-card-badge">Konser Zamanı</div>
+            <div class="gallery-card-overlay">
+              <span class="zoom-bubble">🔍</span>
+              <h4 class="overlay-heading">Ritim Ustası</h4>
+              <span class="overlay-sub">Müzik Performansı</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galeri Öğe 5: Yemek Ziyafeti -->
+        <div class="gallery-card-special card-wide" data-category="ziyafet" data-title="Büyük Hamur Ziyafeti Masası" data-desc="Turtalar, kekler ve meyvelerle dolu rengarenk bir hamur sofrası.">
+          <div class="card-inner-frame">
+            <img src="images/tilki-yemek-ziyafeti.jpg" alt="Foki Yemek Ziyafeti" loading="lazy">
+            <div class="gallery-card-badge">Hamur Şöleni</div>
+            <div class="gallery-card-overlay">
+              <span class="zoom-bubble">🔍</span>
+              <h4 class="overlay-heading">Nefis Ziyafet</h4>
+              <span class="overlay-sub">Lezzet &amp; Eğlence</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Neşe ve Konfeti Butonu -->
+      <div class="gallery-action text-center">
+        <button id="confetti-joy-btn" class="btn btn-primary btn-lg">
+          <span>🎉</span> Foki İle Konfeti Patlat!
+        </button>
+      </div>
+    </div>
+
+    <!-- Dalgalı Geçiş: Galeri -> Atölye -->
+    <div class="wave-divider wave-gallery-to-workshop">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="currentColor">
+        <path d="M0,96L48,85.3C96,75,192,53,288,48C384,43,480,53,576,64C672,75,768,85,864,80C960,75,1056,53,1152,48C1248,43,1344,53,1392,58.7L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- BÖLÜM 4: KİL ATÖLYESİ (Nasıl Yapıldı?) -->
+  <section class="section workshop-section" id="atolye">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-pill pill-lavender">
+          <span>🧁 Sahne Arkası</span>
+        </div>
+        <h2 class="section-title">Oyun Hamuru Büyüsü Nasıl Yaratıldı?</h2>
+        <p class="section-subtitle">
+          Foki ve dünyasını oluştururken kullandığımız el yapımı adımlar:
+        </p>
+      </div>
+
+      <div class="workshop-grid">
+        <div class="workshop-card">
+          <div class="workshop-icon">🎨</div>
+          <h3 class="workshop-title">1. Renk Karışımları</h3>
+          <p class="workshop-desc">
+            Sıcak turuncular, altın sarıları ve zümrüt yeşilleri doğal pigmentli yumuşak hamurlarla harmanlandı.
+          </p>
+        </div>
+
+        <div class="workshop-card">
+          <div class="workshop-icon">🦊</div>
+          <h3 class="workshop-title">2. Karakter Modelleme</h3>
+          <p class="workshop-desc">
+            Foki'nin sevimli burnu, kabarık kuyruğu ve meraklı kulakları milim milim elle şekillendirildi.
+          </p>
+        </div>
+
+        <div class="workshop-card">
+          <div class="workshop-icon">🎬</div>
+          <h3 class="workshop-title">3. Işık ve Çekim</h3>
+          <p class="workshop-desc">
+            Sıcak gün ışığı lambaları altında her sahne özenle kurgulandı ve 5 eşsiz kare yakalandı.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dalgalı Geçiş: Atölye -> Yorumlar -->
+    <div class="wave-divider wave-workshop-to-reviews">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="currentColor">
+        <path d="M0,48L48,58.7C96,69,192,91,288,96C384,101,480,85,576,69.3C672,53,768,37,864,42.7C960,48,1056,75,1152,80C1248,85,1344,69,1392,61.3L1440,53.3L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- BÖLÜM 5: MİNİK DOSTLARIN YORUMLARI (Polaroid Kartlar - 24px Köşeler) -->
+  <section class="section reviews-section" id="yorumlar">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-pill pill-mint">
+          <span>💌 Ziyaretçi Defteri</span>
+        </div>
+        <h2 class="section-title">Foki'yi Çok Sevenler Anlatıyor!</h2>
+        <p class="section-subtitle">
+          Sergimizi gezen minik eller ve büyük hayalperestlerden gelen içten mesajlar.
+        </p>
+      </div>
+
+      <div class="polaroid-grid">
+        
+        <div class="polaroid-card">
+          <div class="polaroid-tape"></div>
+          <div class="polaroid-stars">★★★★★</div>
+          <p class="polaroid-quote">“Foki'nin müzik çalarkenki kahkahasına bayıldım! Hemen eve gidip ben de hamurdan bir gitar yaptım.”</p>
+          <span class="polaroid-author">— Ece (7 Yaşında, Minik Heykeltıraş)</span>
+        </div>
+
+        <div class="polaroid-card">
+          <div class="polaroid-tape"></div>
+          <div class="polaroid-stars">★★★★★</div>
+          <p class="polaroid-quote">“Vadideki manzara fotoğrafı o kadar huzurlu ki çalışma masamın tam karşısına asmak istiyorum!”</p>
+          <span class="polaroid-author">— Can &amp; Selin (Animasyon Tutkunları)</span>
+        </div>
+
+        <div class="polaroid-card">
+          <div class="polaroid-tape"></div>
+          <div class="polaroid-stars">★★★★★</div>
+          <p class="polaroid-quote">“Hamurdan yapılan turtalar ve Foki'nin iştahı beni çok güldürdü. Renkler ve sıcak atmosfer harika!”</p>
+          <span class="polaroid-author">— Kerem (Kil Sanatçısı)</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dalgalı Geçiş: Yorumlar -> Kulüp/Newsletter -->
+    <div class="wave-divider wave-reviews-to-club">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="currentColor">
+        <path d="M0,64L48,58.7C96,53,192,43,288,53.3C384,64,480,96,576,101.3C672,107,768,85,864,69.3C960,53,1056,43,1152,48C1248,53,1344,75,1392,85.3L1440,96L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- BÖLÜM 6: FOKİ'NİN ARKADAŞ KULÜBÜ -->
+  <section class="section club-section" id="kulup">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-decor-left">🦊</div>
+        <div class="newsletter-decor-right">🌟</div>
+
+        <div class="newsletter-content text-center">
+          <div class="badge-pill pill-coral">
+            <span>📮 Ücretsiz Kulüp Kartı</span>
+          </div>
+          <h2 class="newsletter-title">Foki'nin Arkadaş Kulübüne Katıl!</h2>
+          <p class="newsletter-description">
+            E-posta adresini bırak, Foki'nin yeni oyun hamuru şablonları, boyama sayfaları ve sürpriz macera kartları her pazar kutuna gelsin!
+          </p>
+
+          <form id="newsletter-form" class="newsletter-form">
+            <div class="form-group">
+              <input type="text" id="subscriber-name" class="form-input" placeholder="Adın (örneğin: Deniz)" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="subscriber-email" class="form-input" placeholder="E-posta adresin" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              Kulübe Katıl! <span>🐾</span>
+            </button>
+          </form>
+
+          <div id="newsletter-feedback" class="newsletter-feedback" style="display: none;">
+            🎉 <strong>Harika!</strong> Foki seni arkadaş kulübüne ekledi! İlk boyama kartın e-postana uçtu bile!
+          </div>
+
+          <p class="form-note">Asla spam yok, sadece bolca renk, neşe ve oyun hamuru ipuçları! 🌻</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALT BİLGİ (FOOTER) -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <span class="footer-fox-icon">🦊</span>
+          <span class="footer-brand-name">Foki'nin Dünyası</span>
+        </div>
+        <p class="footer-text">
+          Oyun hamuru, hayal gücü ve sıcacık renklerle hayat bulan el yapımı stop-motion sanat projesi. 5 özel kareyle anlatılan neşeli bir tilki hikayesi!
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-circle" aria-label="Instagram">📸</a>
+          <a href="#" class="social-circle" aria-label="YouTube">🎬</a>
+          <a href="#" class="social-circle" aria-label="Pinterest">📌</a>
+          <a href="#" class="social-circle" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">5 Özel Fotoğraf</h4>
+        <ul class="footer-list">
+          <li><a href="#maceralar">#1 Maskot Karakter</a></li>
+          <li><a href="#maceralar">#2 Hamur Vadisi</a></li>
+          <li><a href="#maceralar">#3 Müziğin Keşfi</a></li>
+          <li><a href="#maceralar">#4 Hamur Orkestrası</a></li>
+          <li><a href="#maceralar">#5 Büyük Ziyafet</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hızlı Bağlantılar</h4>
+        <ul class="footer-list">
+          <li><a href="#hakkinda">Foki Kimdir?</a></li>
+          <li><a href="#galeri">Fotoğraf Galerisi</a></li>
+          <li><a href="#atolye">Kil Atölyesi</a></li>
+          <li><a href="#yorumlar">Ziyaretçi Yorumları</a></li>
+          <li><a href="#kulup">Kulübe Üye Ol</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Eğlenceli İpucu 💡</h4>
+        <p class="footer-quote">
+          “Hayat keskin köşeler ve gri renkler için çok kısa!”
+        </p>
+        <div class="stamp-tip">
+          ✨ <em>Yukarıdaki 'Pul Modu' butonuna basıp ekranda istediğin yere tıkla!</em>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 Foki'nin Oyun Hamuru Dünyası. 24px yuvarlak köşeler ve sıcak tonlarla sevgiyle hazırlandı. 🦊🧡</p>
+    </div>
+  </footer>
+
+  <!-- BÜYÜK BOY LIGHTBOX MODAL (Fotoğrafları Tam Ekran İnceleme) -->
+  <div id="image-lightbox" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-overlay" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close-btn" aria-label="Kapat">&times;</button>
+      <div class="lightbox-image-container">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img">
+      </div>
+      <div class="lightbox-info">
+        <h3 id="lightbox-title" class="lightbox-title"></h3>
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Konfeti Tuvali -->
+  <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
